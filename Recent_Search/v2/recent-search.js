@@ -9,7 +9,7 @@ const consumer_key = ''; // Add your API key here
 const consumer_secret = ''; // Add your API secret key here
 
 const bearerTokenURL = new URL('https://api.twitter.com/oauth2/token');
-const searchURL = new URL('https://api.twitter.com/labs/1/tweets/search');
+const searchURL = new URL('https://api.twitter.com/labs/2/tweets/search');
 
 async function bearerToken (auth) {
   const requestConfig = {
@@ -29,7 +29,7 @@ async function bearerToken (auth) {
 
 (async () => {
   let token;
-  const query = '(Labs Search Twitter) OR from:TwitterDev OR from:SnowBotDev OR from:DailyNASA';
+  const query = 'from:twitterdev has:media';
   const maxResults = 10;
 
   try {
